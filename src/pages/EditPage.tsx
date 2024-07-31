@@ -115,7 +115,7 @@ const EditPage = () => {
                     title: `Cannot add more than 5 tags !`,
                     status: status,
                     isClosable: true,
-                    position: "top"
+                    position: "bottom-right"
                   })
                 }
               }}
@@ -148,7 +148,7 @@ const EditPage = () => {
                 title: `Note saved`,
                 status: "success",
                 isClosable: true,
-                position: "top"
+                position: "bottom-right"
               });
             }}
           >

@@ -84,7 +84,6 @@ const Home = () => {
           ),
         };
       });
-      console.log(filteredData);
       setNotesData(filteredData as detailsType[]);
     }
   };

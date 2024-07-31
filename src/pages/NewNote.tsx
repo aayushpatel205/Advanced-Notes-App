@@ -25,7 +25,6 @@ const NewNote = () => {
   });
 
   useEffect(()=>{
-    console.log("Global state changedb!!");
     saveNotesToLocalStorage(notesData as detailsType[]);
   },[notesData])
 
@@ -45,9 +44,7 @@ const NewNote = () => {
     ) {
       setNotesData([...(notesData as detailsType[]), details]);
       const value = createStringArray(details.tags as tagType[] , tags as string[]);
-      console.log(value);
       setTags([...(tags as string[]), ...(value as string[])]);
-      console.log(details.tags);
       navigate("/");
       return 1;
     }else{
@@ -55,7 +52,7 @@ const NewNote = () => {
         title: `Please add a title`,
         status: "warning",
         isClosable: true,
-        position: "top"
+        position: "bottom-right"
       });
     }
     return 0;
@@ -121,7 +118,7 @@ const NewNote = () => {
                     title: `Cannot add more than 5 tags !`,
                     status: status,
                     isClosable: true,
-                    position: "top"
+                    position: "bottom-right"
                   })
                 }
               }}
@@ -152,7 +149,7 @@ const NewNote = () => {
                   title: `Note created`,
                   status: "success",
                   isClosable: true,
-                  position: "top"
+                  position: "bottom-right"
                 });
               }
               
